@@ -1,0 +1,35 @@
+//Create header that only goes halfway across screen.
+//Header must be blank on other half.
+//Create section that goes across screen on 2nd row.
+//Create footer that's blank on first half.
+//Footer must go to end of second half.
+
+
+header, article, section, footer{
+
+}
+body{
+    margin: 20% 40%;
+}
+.container{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer"
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 24px;
+    text-align: right;
+}
+header {
+    grid-area: header;
+}
+section{
+grid-area: sidebar;
+}
+article{
+    grid-area: content;
+}
+footer{
+    grid-area: footer;
+}
